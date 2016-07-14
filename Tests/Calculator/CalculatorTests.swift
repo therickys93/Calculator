@@ -14,10 +14,15 @@ class CalculatorTests: XCTestCase {
 		XCTAssertEqual(calc.add(a: 1, b: 1), 2)
 	}
 
+	func testSubCheck() {
+		XCTAssertEqual(calc.sub(a: 1, b: 1), 0)
+	}
+
 }
 
 extension CalculatorTests {
 	static var allTests: [(String, (CalculatorTests) -> () throws -> Void)] {
-		return [("testAddCheck", testAddCheck)]
+		return [("testAddCheck", testAddCheck),
+				("testSubCheck", testSubCheck)]
 	}
 }
