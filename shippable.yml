@@ -1,0 +1,14 @@
+language: python
+
+python:
+  - 2.7
+
+build:
+
+  pre_ci_boot:
+    image_name: therickys93/ubuntu14php
+    image_tag: latest
+    pull: true
+
+  ci:
+    - bash test.sh
