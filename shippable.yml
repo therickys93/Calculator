@@ -6,7 +6,7 @@ python:
 build:
 
   pre_ci_boot:
-    image_name: therickys93/ubuntu14php
+    image_name: therickys93/ubuntu14swift
     image_tag: latest
     pull: true
 
