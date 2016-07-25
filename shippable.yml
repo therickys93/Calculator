@@ -11,4 +11,4 @@ build:
     pull: true
 
   ci:
-    - bash test.sh
+    - cat ci.yml
