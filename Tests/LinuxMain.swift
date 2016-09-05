@@ -1,4 +1,4 @@
 import XCTest
-@testable import CalculatorTestSuite
+@testable import CalculatorTests
 
 XCTMain([testCase(CalculatorTests.allTests)])
