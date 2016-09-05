@@ -9,6 +9,9 @@ class CalculatorParser {
     }
 
     func getResult() -> String {
+        if self.string == "" {
+            return "no string provided"
+        }
         var array = self.string.components(separatedBy: " ")
         if let first = Double(array[0]) {
             if let second = Double(array[2]) {
@@ -26,10 +29,10 @@ class CalculatorParser {
                     return "error with the operation"
                 }
             } else {
-                return "error with the second number"
+                return "error with the second operand"
             }
         } else {
-            return "error with the first number"
+            return "error with the first operand"
         }
     }
 }

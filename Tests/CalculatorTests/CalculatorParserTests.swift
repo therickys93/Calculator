@@ -31,6 +31,25 @@ class CalculatorParserTests: XCTestCase {
         XCTAssertEqual("2.0", parser.getResult())
     }
 
+    func testFirstOperandError() {
+        let parser = CalculatorParser(string: "c / 3")
+        XCTAssertEqual("error with the first operand", parser.getResult())
+    }
+
+    func testSecondOperandError() {
+        let parser = CalculatorParser(string: "3 - j")
+        XCTAssertEqual("error with the second operand", parser.getResult())
+    }
+
+    func testOperationError() {
+        let parser = CalculatorParser(string: "1 c 4")
+        XCTAssertEqual("error with the operation", parser.getResult())
+    }
+
+    func testNoString() {
+        let parser = CalculatorParser(string: "")
+        XCTAssertEqual("no string provided", parser.getResult())
+    }
 }
 
 extension CalculatorParserTests {
@@ -40,7 +59,11 @@ extension CalculatorParserTests {
             ("testAdd", testAdd),
             ("testSub", testSub),
             ("testMul", testMul),
-            ("testDiv", testDiv)
+            ("testDiv", testDiv),
+            ("testFirstOperandError", testFirstOperandError),
+            ("testSecondOperandError", testSecondOperandError),
+            ("testOperationError", testOperationError),
+            ("testNoString", testNoString)
 		]
 	}
 }
