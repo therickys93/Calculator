@@ -1,0 +1,35 @@
+import Foundation
+
+class CalculatorParser {
+    
+    private var string: String
+
+    init(string: String) {
+        self.string = string
+    }
+
+    func getResult() -> String {
+        var array = self.string.components(separatedBy: " ")
+        if let first = Double(array[0]) {
+            if let second = Double(array[2]) {
+                let calc = Calculator()
+                switch array[1] {
+                case Operations.Plus.rawValue:
+                    return "\(calc.add(a: first, b: second))"
+                case Operations.Minus.rawValue:
+                    return "\(calc.sub(a: first, b: second))"
+                case Operations.Multiply.rawValue:
+                    return "\(calc.mul(a: first, b: second))"
+                case Operations.Divider.rawValue:
+                    return "\(calc.div(a: first, b: second))"
+                default:
+                    return "error with the operation"
+                }
+            } else {
+                return "error with the second number"
+            }
+        } else {
+            return "error with the first number"
+        }
+    }
+}

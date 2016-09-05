@@ -1,18 +1,18 @@
 class Calculator {
 
-	func add(a:Int, b:Int) -> Int {
+	func add(a: Double, b: Double) -> Double {
 		return a + b
 	}
 
-	func sub(a: Int, b: Int) -> Int {
+	func sub(a: Double, b: Double) -> Double {
 		return a - b
 	}
 
-	func mul(a: Int, b: Int) -> Int {
+	func mul(a: Double, b: Double) -> Double {
 		return a * b
 	}
 
-	func div(a: Int, b: Int) -> Int {
+	func div(a: Double, b: Double) -> Double {
 		return a / b
 	}
 

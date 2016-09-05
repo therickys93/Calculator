@@ -1,3 +1,5 @@
 import PackageDescription
 
-let package = Package(name: "Calculator")
+let package = Package(
+    name: "Calculator"
+)
