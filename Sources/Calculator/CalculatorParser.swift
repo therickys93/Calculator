@@ -1,14 +1,14 @@
 import Foundation
 
-class CalculatorParser {
+public class CalculatorParser {
     
     private var string: String
 
-    init(string: String) {
+    public init(string: String) {
         self.string = string
     }
 
-    func getResult() -> String {
+    public func getResult() -> String {
         if self.string == "" {
             return "no string provided"
         }
