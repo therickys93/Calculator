@@ -18,11 +18,23 @@ class CalculatorTests: XCTestCase {
 		XCTAssertEqual(calc.sub(a: 1, b: 1), 0)
 	}
 
+	func testMultiply() {
+		XCTAssertEqual(calc.mul(a: 1, b: 2), 2)
+	}
+
+	func testDivider() {
+		XCTAssertEqual(calc.div(a: 6, b: 3), 2)
+	}
+
 }
 
 extension CalculatorTests {
 	static var allTests: [(String, (CalculatorTests) -> () throws -> Void)] {
-		return [("testAddCheck", testAddCheck),
-				("testSubCheck", testSubCheck)]
+		return [
+			("testAddCheck", testAddCheck),
+			("testSubCheck", testSubCheck),
+			("testMultiply", testMultiply),
+			("testDivider", testDivider)
+		]
 	}
 }
