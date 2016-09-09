@@ -13,12 +13,17 @@ class OperationsTests: XCTestCase {
         XCTAssertEqual("*", Operations.Multiply.rawValue)
         XCTAssertEqual("/", Operations.Divider.rawValue)
     }
+
+	func testAllValues() {
+		XCTAssertEqual([Operations.Plus, Operations.Minus, Operations.Multiply, Operations.Divider], Operations.AllValues)
+	}
 }
 
 extension OperationsTests {
 	static var allTests: [(String, (OperationsTests) -> () throws -> Void)] {
 		return [
-			("testRawSymbols", testRawSymbols)
+			("testRawSymbols", testRawSymbols),
+			("testAllValues", testAllValues)
 		]
 	}
 }

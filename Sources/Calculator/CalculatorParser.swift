@@ -8,6 +8,14 @@ public class CalculatorParser {
         self.string = string
     }
 
+    public func getOperations() -> String {
+	var result = ""
+	for operation in Operations.AllValues {
+		result += operation.rawValue + " "
+	}
+	return result
+    }
+
     public func getResult() -> String {
         if self.string == "" {
             return "no string provided"

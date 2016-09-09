@@ -50,6 +50,11 @@ class CalculatorParserTests: XCTestCase {
         let parser = CalculatorParser(string: "")
         XCTAssertEqual("no string provided", parser.getResult())
     }
+
+	func testGetOperations() {
+		let parser = CalculatorParser(string: "")
+		XCTAssertEqual("+ - * / ", parser.getOperations())
+	}
 }
 
 extension CalculatorParserTests {
@@ -63,7 +68,8 @@ extension CalculatorParserTests {
             ("testFirstOperandError", testFirstOperandError),
             ("testSecondOperandError", testSecondOperandError),
             ("testOperationError", testOperationError),
-            ("testNoString", testNoString)
+            ("testNoString", testNoString),
+		("testGetOperations", testGetOperations)
 		]
 	}
 }
