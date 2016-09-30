@@ -1,5 +1,0 @@
-os: ubuntu14
-language: swift
-script:
-    - swift build
-    - swift test
